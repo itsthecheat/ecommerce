@@ -1,0 +1,31 @@
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header header"
+    "sidebar main main main"
+    "footer footer footer footer";
+}
+.grid-header {
+  text-align: center;
+  grid-area: header;
+  background-color: black;
+  color: white;
+  justify-content: center;
+}
+.grid-sidebar {
+  grid-area: sidebar;
+  background-color: grey;
+  color: white;
+}
+.grid-main {
+  grid-area: main;
+}
+.grid-footer {
+  grid-area: footer;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
