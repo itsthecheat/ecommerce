@@ -9,23 +9,39 @@
     "footer footer footer footer";
 }
 .grid-header {
-  text-align: center;
   grid-area: header;
   background-color: black;
   color: white;
-  justify-content: center;
+  padding: 1rem;
 }
 .grid-sidebar {
   grid-area: sidebar;
   background-color: grey;
   color: white;
+  padding: 1rem;
 }
 .grid-main {
   grid-area: main;
+  padding: 1rem;
 }
 .grid-footer {
   grid-area: footer;
   background-color: black;
   color: white;
   padding: 1rem;
+}
+img {
+  max-width: 35%;
+}
+.product-display {
+  display: flex;
+  flex-flow: row wrap;
+}
+.product {
+  padding: 1rem;
+  height: auto;
+	flex: 1 0 33.3333%;
+	flex-basis: 250px;
+	align-items: center;
+	justify-content: center;
 }
