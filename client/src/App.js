@@ -1,26 +1,11 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
-
-import './App.css';
+import Products from './components/Products'
+import './App.css'
+import 'fontsource-jost'
 
 class App extends Component {
-  constructor(props) {
-  super(props);
-  this.state = {
-    error: null,
-    isLoading: false,
-    products: []
-  };
-}
-  componentDidMount() {
-    this.setState({ isLoading: true });
-    fetch("https://fakestoreapi.com/products")
-    .then(res => res.json())
-           .then((data) => {
-               this.setState({products: data, isLoading: false});
-           });
-  }
   //
   // componentDidMount() {
   //   this.callBackendAPI()
@@ -39,35 +24,21 @@ class App extends Component {
   // };
 
   render() {
-    const { products, isLoading } = this.state;
-    const header =  'A Cool Store!';
-    if (isLoading) {
-      return <p>Loading...</p>
-    }
+    const header =  'A Really Cool Store.';
     return (
       <div className="container">
         <div className="grid-header">
           <Header header={header}/>
         </div>
-        <div className="grid-sidebar">
+      {/*<div className="grid-sidebar">
           <aside>
             Sidebar
           </aside>
-        </div>
+        </div> */}
         <div className="grid-main">
-          <div className="product-display">
-           {products.map(product =>
-             <div className="product" key={product.id}>
-              <h3 className="product-title">{product.title}</h3>
-              <br />
-              <img src={product.image} alt="product"/>
-              <br />
-              ${product.price}
-              <br />
-              <br />
-            </div>
-           )}
-          </div>
+          {/*begin product cards */}
+          <Products />
+          {/*end product cards */}
         </div>
         <div className="grid-footer">
           <Footer />

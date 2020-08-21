@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import styles from './Header.module.css'
+import 'typeface-bebas-neue'
 
 class Header extends Component {
   render() {

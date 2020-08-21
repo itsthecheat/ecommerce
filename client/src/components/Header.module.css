@@ -5,7 +5,8 @@ header {
   align-items: center;
 }
 .title {
-
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.5rem;
 }
 .user {
 

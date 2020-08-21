@@ -1,23 +1,24 @@
 .container {
+  font-family: 'Jost', sans-serif;
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "header header header header"
-    "sidebar main main main"
+    "main main main main"
     "footer footer footer footer";
 }
 .grid-header {
   grid-area: header;
-  background-color: black;
-  color: white;
+  background-color: lightblue;
+  color: black;
   padding: 1rem;
 }
 .grid-sidebar {
   grid-area: sidebar;
   background-color: grey;
-  color: white;
+  color: black;
   padding: 1rem;
 }
 .grid-main {
@@ -29,19 +30,4 @@
   background-color: black;
   color: white;
   padding: 1rem;
-}
-img {
-  max-width: 35%;
-}
-.product-display {
-  display: flex;
-  flex-flow: row wrap;
-}
-.product {
-  padding: 1rem;
-  height: auto;
-	flex: 1 0 33.3333%;
-	flex-basis: 250px;
-	align-items: center;
-	justify-content: center;
 }

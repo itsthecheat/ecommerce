@@ -1,0 +1,33 @@
+.productDisplay {
+  display: flex;
+  flex-flow: row wrap;
+}
+.product {
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 10px;
+  margin: 10px;
+  border: 2px solid grey;
+  padding: 1rem;
+  height: auto;
+	flex: 3 33.3333%;
+	flex-basis: 250px;
+  justify-content: space-between;
+}
+img {
+  max-width: 40%;
+  padding: 10px;
+}
+.productPrice {
+  padding: 10px;
+}
+button {
+  filter: drop-shadow(7px 5px 6px grey);
+  width: 100px;
+  height: 25px;
+  border-radius: 15px;
+  border: 0;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+}
