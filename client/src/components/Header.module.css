@@ -1,13 +1,44 @@
 header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 .title {
   font-family: 'Bebas Neue', cursive;
   font-size: 2.5rem;
+  filter: drop-shadow(5px 5px 1px yellow);
 }
-.user {
-
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+.account {
+  display: flex;
+  flex-flow: column;
+}
+.create {
+  font-size: 10px;
+}
+.cart {
+  margin: 5px;
+  align-self: center;
+}
+.accountButton {
+  filter: drop-shadow(2px 2px 1px grey);
+  width: 100px;
+  height: 25px;
+  border-radius: 15px;
+  border: 0;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  align-self: center;
+  margin: 10px;
 }

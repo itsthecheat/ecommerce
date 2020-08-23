@@ -21,7 +21,7 @@ img {
 .productPrice {
   padding: 10px;
 }
-button {
+.cartButton {
   filter: drop-shadow(7px 5px 6px grey);
   width: 100px;
   height: 25px;
@@ -30,4 +30,9 @@ button {
   background-color: black;
   color: white;
   text-transform: uppercase;
+  transition: background-color 0.5s ease;
+}
+.cartButton:hover {
+  background-color: yellow;
+  color: black;
 }

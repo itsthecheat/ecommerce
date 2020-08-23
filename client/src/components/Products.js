@@ -3,20 +3,24 @@ import styles from './Products.module.css'
 
 class Products extends Component {
   constructor(props) {
-  super(props);
-  this.state = {
-    error: null,
-    isLoading: false,
-    products: []
-  };
-}
+    super(props);
+      this.state = {
+        error: null,
+        isLoading: false,
+        products: []
+      };
+      this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick = () => {  console.log('You have clicked the button');  }
+
   componentDidMount() {
     this.setState({ isLoading: true });
     fetch("https://fakestoreapi.com/products")
     .then(res => res.json())
-           .then((data) => {
-               this.setState({products: data, isLoading: false});
-           });
+    .then((data) => {
+      this.setState({products: data, isLoading: false});
+    });
   }
 
   render() {
@@ -31,13 +35,12 @@ class Products extends Component {
            <h3 className={styles.productTitle}>{product.title}</h3>
            <img src={product.image} alt="product"/>
            <div className={styles.productPrice}>${product.price}</div>
-           <button>Add to cart</button>
+           <button key={product.id} onClick={this.handleClick} className={styles.cartButton}>Add to cart</button>
          </div>
        )}
       </div>
     );
   }
-
 
 }
 

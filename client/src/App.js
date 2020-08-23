@@ -1,9 +1,12 @@
 import React, {Component} from 'react'
+import { Route, Switch } from 'react-router-dom';
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Products from './components/Products'
+import createAccount from './components/createAccount'
 import './App.css'
 import 'fontsource-jost'
+
 
 class App extends Component {
   //
@@ -37,14 +40,20 @@ class App extends Component {
         </div> */}
         <div className="grid-main">
           {/*begin product cards */}
-          <Products />
+          <Switch>
+            <Route path='/' component={Products} exact />
+            <Route path='/create' component={createAccount} />
+          </Switch>
           {/*end product cards */}
         </div>
         <div className="grid-footer">
           <Footer />
         </div>
+
       </div>
-    );
+
+
+    )
   }
 }
 
