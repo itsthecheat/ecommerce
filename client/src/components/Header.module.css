@@ -26,10 +26,6 @@ a:visited {
 .create {
   font-size: 10px;
 }
-.cart {
-  margin: 5px;
-  align-self: center;
-}
 .accountButton {
   filter: drop-shadow(2px 2px 1px grey);
   width: 100px;

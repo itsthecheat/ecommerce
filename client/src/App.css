@@ -15,11 +15,6 @@
   color: black;
   padding: 1rem;
 }
-.grid-sidebar {
-  grid-area: sidebar;
-  background-color: grey;
-  padding: 1rem;
-}
 .grid-main {
   grid-area: main;
   padding: 1rem;

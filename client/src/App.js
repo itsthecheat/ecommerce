@@ -33,11 +33,6 @@ class App extends Component {
         <div className="grid-header">
           <Header header={header}/>
         </div>
-      {/*<div className="grid-sidebar">
-          <aside>
-            Sidebar
-          </aside>
-        </div> */}
         <div className="grid-main">
           {/*begin product cards */}
           <Switch>

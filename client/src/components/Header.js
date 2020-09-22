@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import styles from './Header.module.css'
 import 'typeface-bebas-neue'
-import { GrCart } from 'react-icons/gr';
+import Cart from './Cart'
 
 class Header extends Component {
   render() {
@@ -17,7 +17,7 @@ class Header extends Component {
               </span>
 
           </div>
-          <GrCart className={styles.cart} size="2rem"/>
+          <Cart/>
         </div>
 
 
