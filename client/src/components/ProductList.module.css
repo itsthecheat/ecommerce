@@ -22,6 +22,7 @@ img {
   padding: 10px;
 }
 .cartButton {
+  margin: 5px;
   filter: drop-shadow(7px 5px 6px grey);
   width: 100px;
   height: 25px;
