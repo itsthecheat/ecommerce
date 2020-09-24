@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import styles from './Header.module.css'
 import 'typeface-bebas-neue'
-import CartButton from './CartButton'
+import CartIcon from './CartIcon'
 
 class Header extends Component {
   render() {
@@ -17,10 +17,8 @@ class Header extends Component {
               </span>
 
           </div>
-          <CartButton/>
+          <CartIcon/>
         </div>
-
-
       </header>
     );
   }

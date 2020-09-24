@@ -1,0 +1,32 @@
+.containerDisplay {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  height: 100%;
+  align-content: space-around;
+  margin: 25px;
+}
+input {
+  margin-right: 10px;
+}
+@media screen and (max-width: 480px){
+  .containerDisplay {
+    flex-wrap: wrap;
+  }
+}
+.cartButton {
+  margin: 5px;
+  filter: drop-shadow(7px 5px 6px grey);
+  width: 100px;
+  height: 25px;
+  border-radius: 15px;
+  border: 0;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease;
+}
+.cartButton:hover {
+  background-color: yellow;
+  color: black;
+}

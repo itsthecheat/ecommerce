@@ -4,8 +4,8 @@ import ProductList from './ProductList'
 import createAccount from './createAccount'
 import viewAccount from './viewAccount'
 import Cart from './Cart'
-import CartButton from './CartButton'
+import CartIcon from './CartIcon'
 import Login from './Login'
-import Product from './Product'
+import SingleProductPage from './SingleProductPage'
 
-export { Header, Footer, Product, ProductList, createAccount, viewAccount, Cart, CartButton, Login }
+export { Header, Footer, ProductList, createAccount, viewAccount, Cart, CartIcon, Login, SingleProductPage }

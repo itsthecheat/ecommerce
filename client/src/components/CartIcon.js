@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import { GrCart } from 'react-icons/gr'
-import styles from './CartButton.module.css'
+import styles from './CartIcon.module.css'
 
-class CartButton extends Component {
+class CartIcon extends Component {
   render() {
     return (
       <Link to='/cart'>
@@ -14,4 +14,4 @@ class CartButton extends Component {
   }
 }
 
-export default CartButton;
+export default CartIcon;

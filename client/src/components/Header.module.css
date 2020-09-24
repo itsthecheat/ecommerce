@@ -14,6 +14,7 @@ a {
 a:visited {
   color: black;
 }
+
 .buttonContainer {
   display: flex;
   justify-content: space-between;
@@ -27,7 +28,7 @@ a:visited {
   font-size: 10px;
 }
 .accountButton {
-  filter: drop-shadow(2px 2px 1px grey);
+  filter: drop-shadow(2px 2px 1px yellow);
   width: 100px;
   height: 25px;
   border-radius: 15px;
@@ -37,4 +38,10 @@ a:visited {
   text-transform: uppercase;
   align-self: center;
   margin: 10px;
+}
+@media screen and (max-width: 480px){
+  header {
+    flex-flow: column wrap;
+    align-items: center;
+  }
 }

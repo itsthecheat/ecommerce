@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Route, Switch } from 'react-router-dom';
-import { Header, Footer, ProductList, createAccount, Cart, Product } from './components'
+import { Header, Footer, ProductList, createAccount, Cart, SingleProductPage } from './components'
 import './App.css'
 import 'fontsource-jost'
 
@@ -21,7 +21,6 @@ class App extends Component {
   //   }
   //   return body;
   // };
-
   render() {
     const header =  'A Really Cool Store.';
     return (
@@ -30,22 +29,17 @@ class App extends Component {
           <Header header={header}/>
         </div>
         <div className="grid-main">
-          {/*begin product cards */}
           <Switch>
             <Route path='/' component={ProductList} exact />
             <Route path='/create' component={createAccount} />
-            <Route path='/cart' component={Cart} />
-            <Route path='/product/:id' component={Product}/>
+            <Route path='/cart/:id?' component={Cart} />
+            <Route path='/product/:id' component={SingleProductPage}/>
           </Switch>
-          {/*end product cards */}
         </div>
         <div className="grid-footer">
           <Footer />
         </div>
-
       </div>
-
-
     )
   }
 }

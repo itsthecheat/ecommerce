@@ -1,3 +1,21 @@
 footer {
-
+  flex-grow: 1;
+}
+span.name a {
+  color: black;
+  text-decoration: underline;
+}
+span.name a:visited {
+  color: black;
+  text-decoration: underline;
+}
+@media screen and (max-width: 480px){
+  header {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .name {
+    padding-bottom: 5px;
+    font-size: .9rem;
+  }
 }
