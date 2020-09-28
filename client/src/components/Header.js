@@ -11,8 +11,8 @@ class Header extends Component {
         <h1 className={styles.title}><Link to='/'>{this.props.header}</Link></h1>
         <div className={styles.buttonContainer}>
           <div className={styles.account}>
-            <button className={styles.accountButton}>Sign-In
-            </button>
+            <Link to='/signin'><button className={styles.accountButton}>Sign-In
+            </button></Link>
               <span className={styles.create}>No account? <Link to='/create'>Create one now!</Link>
               </span>
 

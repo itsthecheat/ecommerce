@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+form {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 0.1rem grey solid;
+  filter: drop-shadow(2px 2px 1px yellow);
+  list-style-type: none;
+}
+input {
+  padding: .5rem;
+  margin-bottom: 1rem;
+}
+.accountButton {
+  margin: 5px;
+  filter: drop-shadow(2px 2px 1px yellow);
+  width: 100px;
+  height: 25px;
+  border-radius: 15px;
+  border: 0;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease;
+}
+.accountButton:hover {
+  background-color: yellow;
+  color: black;
+}

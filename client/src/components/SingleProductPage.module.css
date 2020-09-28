@@ -2,7 +2,6 @@
   display: flex;
   flex-flow: row;
   justify-content: center;
-  height: 100%;
   align-content: space-around;
   margin: 25px;
 }
@@ -13,6 +12,9 @@ input {
   .containerDisplay {
     flex-wrap: wrap;
   }
+}
+.cartInfo {
+  padding-bottom: 40px;
 }
 .cartButton {
   margin: 5px;
@@ -29,4 +31,9 @@ input {
 .cartButton:hover {
   background-color: yellow;
   color: black;
+}
+h2 {
+  margin: 15px;
+  padding-bottom: 25px;
+  text-decoration: underline;
 }

@@ -1,4 +1,21 @@
 .cart {
   margin: 5px;
   align-self: center;
+  filter: drop-shadow(2px 2px 1px yellow);
+}
+.qty {
+  padding-left: 9px;
+  padding-right: 9px;
+ -webkit-border-radius: 9px;
+ -moz-border-radius: 9px;
+ border-radius: 9px;
+
+}
+#count {
+  font-size: 12px;
+  background: black;
+  color: #fff;
+  padding: 0 5px;
+  vertical-align: top;
+  margin-left: -6px;
 }

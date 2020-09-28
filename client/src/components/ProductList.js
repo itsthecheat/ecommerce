@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom'
 import styles from './ProductList.module.css'
 import { connect } from 'react-redux'
 import { listProducts } from '../store/actions/productActions'
-
+import { addToCart} from '../store/actions/cartActions'
 
 const ProductList = (props) => {
-const {dispatch, loading, products, error} = props
+const {dispatch, loading, products, error, match} = props
+
 useEffect(() => {
   dispatch(listProducts());
 }, [])
@@ -23,8 +24,7 @@ return loading ? <p>Checking our inventory...</p> : error ? <p>{error}</p> :
              <Link to= {`/product/${product.id}`}>
                 <button className={styles.cartButton}>Details</button>
              </Link>
-            {/* <button className={styles.cartButton}>Add to cart</button> 
-            */}
+            <button onClick={() => dispatch(addToCart(product.id, 1))} className={styles.cartButton}>Add to cart</button>
            </div>
          </div>
        )}

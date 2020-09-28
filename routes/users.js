@@ -1,27 +1,63 @@
-const router = require('express').Router();
-let User = require('../models/user.model');
+import express from 'express'
+import User from '../models/userModel'
 
-router.route('/').get((req, res) => {
-  User.find()
-    .then(users => res.json(users))
-    .catch(err => res.status(400).json('Error: ' + err));
+const router = express.Router();
+
+router.get('/createadmin', async (req, res) => {
+  try {
+    const user = new User({
+      firstname: 'Leslie',
+      lastname: 'Behum',
+      email: 'admin@admin.com',
+      password: '1234',
+      isAdmin: true
+    });
+    const newUser = await user.save();
+    res.send(newUser);
+  } catch (error) {
+    res.send({ message: error.message });
+  }
 });
 
-router.route('/add').post((req, res) => {
-  const firstname = req.body.firstname;
-  const lastname = req.body.lastname;
-  const email = req.body.email;
-  const password = req.body.password;
 
-  const newUser = new User({
-    firstname,
-    lastname,
-    email,
-    password});
+router.post('/signin', async (req, res) => {
+  const signinUser = await User.findOne({
+    email: req.body.email,
+    password: req.body.password
+  })
+  if (signinUser) {
+    res.send({
+      _id: signinUser.id,
+      firstname: signinUser.firstname,
+      lastname: signinUser.lastname,
+      email: signinUser.email,
+      isAdmin: signinUser.isAdmin,
+      token: getToken(user)
+    })
+  } else {
+    res.status(401).send({msg: 'Email or Password Invalid'})
+  }
+})
 
-  newUser.save()
-    .then(() => res.json('User added!'))
-    .catch(err => res.status(400).json('Error: ' + err));
-});
+router.post('/create', async (req, res) => {
+  const user = new User({
+    firstname: req.body.firstname,
+    lastname: req.body.lastname,
+    password: req.body.password
+  })
+  const newUser = await user.save()
+  if (newUser) {
+    res.send({
+      _id: newUser.id,
+      firstname: newUser.firstname,
+      lastname: newUser.lastname,
+      email: newUser.email,
+      isAdmin: newUser.isAdmin,
+      token: getToken(newUser)
+    })
+  } else {
+    res.status(401).send({msg: 'Data Invalid'})
+  }
+})
 
-module.exports = router;
+export default router;

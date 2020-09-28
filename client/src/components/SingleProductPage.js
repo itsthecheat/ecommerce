@@ -4,8 +4,6 @@ import { connect } from 'react-redux'
 import styles from './SingleProductPage.module.css'
 import { singleProduct } from '../store/actions/singleProductAction'
 
-
-
 const SingleProductPage = (props) => {
 const { dispatch, match, product, error, loading } = props;
 const [qty, setQty] = useState(1);
@@ -14,19 +12,18 @@ const handleAddToCart = () => {
 }
   useEffect(() => {
     const { id } = match.params
-    console.log(id)
     dispatch(singleProduct(id))
   }, [])
 
   return loading ? <p>Loading...</p> : error ? <p>{error}</p> :
 <>
-<Link to='/'><h2>Back</h2></Link>
+  <Link to='/'><h2>Back</h2></Link>
   <div className={styles.containerDisplay}>
-    <div className={styles.leftCol}>
+    <div >
       <h1>{product.title}</h1>
       <img src={product.image} alt={product.title} />
     </div>
-    <div className={styles.rightCol}>
+    <div className={styles.cartInfo}>
       <p>{product.description}</p>
       <h3>${product.price}</h3>
         <label for="quantity">Quantity:</label>
@@ -44,4 +41,4 @@ const mapStateToProps = state => ({
   error: state.product.error,
 })
 
-export default connect(mapStateToProps)(SingleProductPage)
+export default connect(mapStateToProps)(SingleProductPage) 

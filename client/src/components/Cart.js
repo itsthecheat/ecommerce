@@ -54,8 +54,12 @@ const handleCheckout = () => {
         </ul>
       </div>
       <div className={styles.total}>
-        <h3>Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)} items) :
-        $ {cartItems.reduce((a,c ) => a + c.price * c.qty, 0).toFixed(2)}</h3>
+        <h3>
+          Subtotal ({cartItems.reduce((a, c) => a + Number(c.qty), 0)} items)
+          :
+        $ {cartItems.reduce((a,c ) => a + c.price * Number(c.qty), 0).toFixed(2)}
+        </h3>
+
       <button onClick={handleCheckout} className={styles.cartButton} disabled={cartItems.length === 0}>
         Checkout
       </button>

@@ -1,6 +1,6 @@
 .container {
   font-family: 'Jost', sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto 1fr auto;
@@ -14,17 +14,15 @@
   grid-area: header;
   background-color: rgba(177, 247, 224, 1);
   color: black;
-  padding: 1rem;
-
+  padding: .5rem;
+  filter: drop-shadow(3px 2px 4px lightgrey);
 }
 .grid-main {
   grid-area: main;
   padding: 1rem;
-  overflow: auto;
-
 }
 .grid-footer {
   grid-area: footer;
   background-color: rgba(177, 247, 224, 1);
-  padding: 1rem;
+  padding: .5rem;
 }

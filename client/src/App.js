@@ -1,26 +1,11 @@
 import React, {Component} from 'react'
 import { Route, Switch } from 'react-router-dom';
-import { Header, Footer, ProductList, createAccount, Cart, SingleProductPage } from './components'
+import { Header, Footer, ProductList, Cart, SingleProductPage, SignIn, CreateAccount } from './components'
 import './App.css'
 import 'fontsource-jost'
 
 class App extends Component {
-  //
-  // componentDidMount() {
-  //   this.callBackendAPI()
-  //     .then(res=> this.setState({ data: res.express }))
-  //     .catch(err=> console.log(err));
-  // }
-  //
-  // callBackendAPI = async () => {
-  //   const response = await fetch('express_backend');
-  //   const body = await response.json();
-  //
-  //   if (response.status !== 200) {
-  //     throw Error(body.message)
-  //   }
-  //   return body;
-  // };
+
   render() {
     const header =  'A Really Cool Store.';
     return (
@@ -31,7 +16,8 @@ class App extends Component {
         <div className="grid-main">
           <Switch>
             <Route path='/' component={ProductList} exact />
-            <Route path='/create' component={createAccount} />
+            <Route path='/signin' component={SignIn} />
+            <Route path='/create' component={CreateAccount} />
             <Route path='/cart/:id?' component={Cart} />
             <Route path='/product/:id' component={SingleProductPage}/>
           </Switch>

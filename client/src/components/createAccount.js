@@ -1,12 +1,39 @@
-import React, {Component} from 'react'
+import React, {useDispatch, useEffect} from 'react'
+import styles from './CreateAccount.module.css'
 
 
-class createAccount extends Component {
-  render() {
+const CreateAccount = (props) => {
+
     return (
-      <p>Create an account</p>
-    );
-  }
-}
+    <div className={styles.container}>
+      <form className={styles.form} method="get" >
+        <label><b>First Name
+        </b>
+        </label>
+        <input type="firstname" name="firstname" placeholder="First Name"/>
+        <label><b>Last Name
+        </b>
+        </label>
+        <input type="lastname" name="lastname" placeholder="Last Name"/>
+        <label><b>Email
+        </b>
+        </label>
+        <input type="email" name="email" placeholder="Email"/>
+        <label><b>Password
+        </b>
+        </label>
+        <input type="Password" name="password" placeholder="Password"/>
+        <label><b>* Confirm Password
+        </b>
+        </label>
+        <input type="Password" name="confirmpassword" placeholder="Confirm Password"/>
+        <button className={styles.accountButton}>Create Account
+        </button>
 
-export default createAccount;
+    </form>
+</div>
+    )
+  }
+
+
+export default CreateAccount
