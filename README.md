@@ -15,5 +15,5 @@ and connected with MongoDB Atlas along with models, schemas and beginning of rou
 ### To-Do:
 1. Implement Login and Create Account
 2. Connect client to server for user and cart information
-3. Add number to cart icon in header indicating number of items in cart
+~~3. Add number to cart icon in header indicating number of items in cart~~
 4. Implement checkout. Currently redirects user.
