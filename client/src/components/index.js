@@ -7,4 +7,13 @@ import CartIcon from './CartIcon'
 import SignIn from './SignIn'
 import SingleProductPage from './SingleProductPage'
 
-export { Header, Footer, ProductList, CreateAccount, Cart, CartIcon, SignIn, SingleProductPage }
+export {
+  Header,
+  Footer,
+  ProductList,
+  CreateAccount,
+  Cart,
+  CartIcon,
+  SignIn,
+  SingleProductPage,
+}

@@ -1,47 +1,38 @@
-import React, {useDispatch, useEffect} from 'react'
+import React, { useDispatch, useEffect } from 'react'
 import styles from './CreateAccount.module.css'
 
 const CreateAccount = (props) => {
-
   return (
     <div className={styles.container}>
-      <form className={styles.form} method="get" >
+      <form className={styles.form} method='get'>
         <label>
-          <b>
-            First Name
-          </b>
+          <b>First Name</b>
         </label>
-          <input type="firstname" name="firstname" placeholder="First Name"/>
+        <input type='firstname' name='firstname' placeholder='First Name' />
         <label>
-          <b>
-            Last Name
-          </b>
+          <b>Last Name</b>
         </label>
-          <input type="lastname" name="lastname" placeholder="Last Name"/>
+        <input type='lastname' name='lastname' placeholder='Last Name' />
         <label>
-          <b>
-            Email
-          </b>
+          <b>Email</b>
         </label>
-          <input type="email" name="email" placeholder="Email"/>
+        <input type='email' name='email' placeholder='Email' />
         <label>
-          <b>
-            Password
-          </b>
+          <b>Password</b>
         </label>
-          <input type="Password" name="password" placeholder="Password"/>
+        <input type='Password' name='password' placeholder='Password' />
         <label>
-          <b>
-            * Confirm Password
-          </b>
+          <b>* Confirm Password</b>
         </label>
-          <input type="Password" name="confirmpassword" placeholder="Confirm Password"/>
-        <button className={styles.accountButton}>Create Account
-        </button>
+        <input
+          type='Password'
+          name='confirmpassword'
+          placeholder='Confirm Password'
+        />
+        <button className={styles.accountButton}>Create Account</button>
       </form>
     </div>
   )
 }
-
 
 export default CreateAccount
