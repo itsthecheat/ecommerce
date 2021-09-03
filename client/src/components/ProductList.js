@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
@@ -6,7 +7,7 @@ import { listProducts } from '../store/actions/productActions'
 import { addToCart } from '../store/actions/cartActions'
 
 const ProductList = (props) => {
-  const { dispatch, loading, products, error, match } = props
+  const { dispatch, loading, products, error } = props
 
   useEffect(() => {
     dispatch(listProducts())
@@ -22,7 +23,10 @@ const ProductList = (props) => {
         <div className={styles.product}>
           <h3 className={styles.productTitle}>{product.title}</h3>
           <img src={product.image} alt='product' />
-          <div className={styles.productPrice}>${product.price.toFixed(2)}</div>
+          <div className={styles.productPrice}>
+$
+{product.price.toFixed(2)}
+          </div>
           <div>
             <Link to={`/product/${product.id}`}>
               <button className={styles.cartButton}>Details</button>

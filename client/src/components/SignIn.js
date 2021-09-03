@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
+import React from 'react'
+// import { Link } from 'react-router-dom'
+// import { useSelector, useDispatch } from 'react-redux'
 import styles from './SignIn.module.css'
 
 const SignIn = (props) => (

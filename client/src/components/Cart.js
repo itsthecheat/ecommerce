@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart, removeFromCart } from '../store/actions/cartActions'
@@ -75,15 +76,16 @@ const Cart = (props) => {
       </div>
       <div className={styles.total}>
         <h3>
-          Subtotal ({cartItems.reduce((a, c) => a + Number(c.qty), 0)}
+          Subtotal ( 
 {' '}
-items) :
+{cartItems.reduce((a, c) => a + Number(c.qty), 0)} items) :
           $
-{cartItems
+          {cartItems
             .reduce((a, c) => a + c.price * Number(c.qty), 0)
             .toFixed(2)}
         </h3>
         <button
+          type='button'
           onClick={handleCheckout}
           className={styles.cartButton}
           disabled={cartItems.length === 0}
