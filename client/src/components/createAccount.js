@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useDispatch, useEffect } from 'react'
 import styles from './CreateAccount.module.css'
 
