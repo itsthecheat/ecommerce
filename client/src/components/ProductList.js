@@ -22,10 +22,7 @@ const ProductList = (props) => {
         <div className={styles.product}>
           <h3 className={styles.productTitle}>{product.title}</h3>
           <img src={product.image} alt='product' />
-          <div className={styles.productPrice}>
-            $
-{product.price.toFixed(2)}
-          </div>
+          <div className={styles.productPrice}>${product.price.toFixed(2)}</div>
           <div>
             <Link to={`/product/${product.id}`}>
               <button className={styles.cartButton}>Details</button>
