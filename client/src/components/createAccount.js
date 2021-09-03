@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useDispatch, useEffect } from 'react'
+import React from 'react'
 import styles from './CreateAccount.module.css'
 
 const CreateAccount = (props) => {
@@ -30,7 +30,9 @@ const CreateAccount = (props) => {
           name='confirmpassword'
           placeholder='Confirm Password'
         />
-        <button className={styles.accountButton}>Create Account</button>
+        <button type='button' className={styles.accountButton}>
+          Create Account
+        </button>
       </form>
     </div>
   )
